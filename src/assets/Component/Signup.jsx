@@ -6,21 +6,23 @@ const Signup = ({setuname,setemail,setLogedin,setpassword}) => {
   const [name,setname]=useState('enter name:')
   const [email,setemail1]=useState('enter email:')
   const [password,setpassword1]=useState('')
+  const [check,setcheck]=useState('')
   const navigate=useNavigate(null)
   useEffect(()=>{
     setLogedin(true)
     setemail(email)
-  },[])
+  },[check])
   const verify=()=>{
     if(name ==='enter name:' || email==='enter email:' || password===''){
       alert('enter crendentials')
     }
     else{
-      setLogedin(true)
+    setLogedin(true)
     setemail(email)
     setuname(name)
     setpassword(password)
     navigate('/profile')
+    setcheck('ehllo')
     }
   }
   return (
