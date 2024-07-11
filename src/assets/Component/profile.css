@@ -27,6 +27,6 @@
         height: 400px;
     }
     .impp{
-        width: 50%;
+        max-width: 80%;
     }
 }

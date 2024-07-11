@@ -56,7 +56,7 @@
 }
 @media(max-width:900px){
     .parent{
-        left: 20%;
+        left: 20px;
     }
 }
 .signup1{
