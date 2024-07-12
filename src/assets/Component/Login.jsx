@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Login.css'
-const Login = ({setLogedin,passworda,emaila}) => {
+const Login = ({setLogedin,passworda,emaila,setemail}) => {
   const [name,setname]=useState('enter email id:')
   const [password,setpassword]=useState('')
   const navigate=useNavigate(null)
+  const [check,setcheck]=useState('see')
+  // useEffect(()=>{
+  //   setLogedin(true)
+  //   setemail(emaila)
+  // },check)
   const verify=(e)=>{
     if(name===emaila && password===passworda){
       navigate('/profile')
       setLogedin(true)
+      setcheck('login')
     }
     else{
       alert('wrong credential')

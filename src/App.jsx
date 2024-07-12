@@ -17,9 +17,10 @@ function App() {
       <Routes>
         <Route  path='/' element={<Navbar/>}>
           <Route exact path='/' element={<Home/>}/>
-          <Route  path='/login' element={<Login setLogedin={setLogedin }  passworda={password} emaila={email}/>}/>
+          <Route  path='/login' element={<Login setLogedin={setLogedin }  passworda={password} emaila={email} setemail={setemail}/>}/>
           <Route path='/signup' element={<Signup setuname={setuname} setemail={setemail} setLogedin={setLogedin } setpassword={setpassword}/>}/>
           <Route path='/profile' element={Logedin?<Profile username={username} email={email}/> : <Navigate replace to={'/login'}/>}/> 
+          {console.log(Logedin)}
         </Route>
         <Route path='*' element={<Notfound/>}/>
       </Routes>
